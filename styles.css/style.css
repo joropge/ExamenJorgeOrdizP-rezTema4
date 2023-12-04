@@ -1,54 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100;400&display=swap');
-*{
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/RobotoCondensed-Italic-VariableFont_wght.ttf');
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-p{
+p {
     color: rgb(255, 196, 0);
-    font-family: 'Saira Extra Condensed';
+    font-family: 'Roboto, Saira Extra Condensed';
 }
 
-body{
-    background-image:url(../assets/imgs/carretera.jpg);
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(../assets/imgs/carretera.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment:fixed;
+    background-attachment: fixed;
 }
 
-.borde{
-    color:black;
-    text-shadow: -1px -1px 0 white, 1px -1px 0 white, 1px 1px 0 white,-1px 1px 0 white;
-    
+.centrar {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction:left;
+    gap:50px
 }
 
 
-span{
+.borde {
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, 1px 1px 0 white, -1px 1px 0 white;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    width: 500px;
+    padding-bottom:50px ;
+}
+
+
+span {
     color: rgb(255, 196, 0);
     display: block;
     font-family: monospace;
     white-space: nowrap;
-    border-right: 4px solid rgb(255, 196, 0);;
-    width: 30ch;
+    border-right: 4px solid rgb(255, 196, 0);
+    width: 35ch;
     animation: typing 2s steps(30), blink 1s infinite step-end alternate;
     overflow: hidden;
 }
 
 @keyframes typing {
-    from{
+    from {
         width: 0;
     }
-    to{
+
+    to {
         width: 30ch;
     }
-    
+
 }
 
 @keyframes blink {
-    50%{
+    50% {
         border-color: transparent;
     }
 
-    
+
 }
