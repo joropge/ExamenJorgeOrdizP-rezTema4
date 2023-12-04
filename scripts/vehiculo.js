@@ -1,60 +1,79 @@
 import { mostrarResultado } from "./main.js";
-class Vehiculo{
-    #marca;
-    #modelo;
-    #color;
-    #añoFabricación;
-    #cilindrada;
-    construsctor(marca, modelo, color, añoFabricación, cilindrada){
-        this.#marca = marca;
-        this.#modelo = modelo;
-        this.#color = color;
-        this.#añoFabricación = añoFabricación;
-        this.#cilindrada = cilindrada;
-    }
-    get marca(){
-        return this.#marca;
-    }
-    set marca(marca){
-        this.#marca = marca;
-    }
-    get modelo(){
-        return this.#modelo;
-    }
-    set modelo(modelo){
-        this.#modelo = modelo;
-    }
-    get color(){
-        return this.#color;
-    }
-    set color(color){
-        this.#color = color;
-    }
-    get añoFabricación(){
-        return this.#añoFabricación;
-    }
-    set añoFabricación(añoFabricación){
-        this.#añoFabricación = añoFabricación;
-    }
-    get cilindrada(){
-        return this.#cilindrada;
-    }
-    set cilindrada(cilindrada){
-        this.#cilindrada = cilindrada;
-    }
+class Vehiculo {
+  #marca;
+  #modelo;
+  #color;
+  #añoFabricación;
+  #cilindrada;
+  construsctor(marca, modelo, color, añoFabricación, cilindrada) {
+    this.#marca = marca;
+    this.#modelo = modelo;
+    this.#color = color;
+    this.#añoFabricación = añoFabricación;
+    this.#cilindrada = cilindrada;
+  }
+  mostrarDatos() {
+    const datos = `
+            La marca es: ${this.#marca}
+            <br />
+            El modelo es: ${this.#modelo}
+            <br />
+            su color es: ${this.#color}
+            <br />
+            Se fabricó el año: ${this.#añoFabricación}
+            <br />
+            Cilindrada: ${this.#cilindrada}
+        `;
 
-    mostrarDatos(){
-        return `Marca: ${this.#marca} Modelo: ${this.#modelo} Color: ${this.#color} Año de fabricación: ${this.#añoFabricación} Cilindrada: ${this.#cilindrada}`;
-    }
-    acelerar(velocidad){
-        return `El vehiculo ha acelerado hasta la velocidad de ${velocidad} km/h`;
-    }
-    arrancar(){
-        return `El vehiculo ha arrancado`;
-    }
-    frenar(){
-        return `El vehiculo se ha detenido`;
-    }
+    //llamo a la función mostrarResultado
+    mostrarResultado(`<p>${datos}</p>`);
+  }
+
+  acelerar(velocidad) {
+    const mensaje = `<br /> Se ha acelerado hasta--> ${velocidad}`;
+    mostrarResultado(`<p>${mensaje}</p>`);
+  }
+ 
+  arrancar() {
+    const mensaje = `El vehiculo ha arrancado`;
+    mostrarResultado(`<p>${mensaje}</p>`);
+  }
+  frenar() {
+    const mensaje = `El vehiculo se ha detenido`;
+    mostrarResultado(`<p>${mensaje}</p>`);
+  }
+
+
+  get marca() {
+    return this.#marca;
+  }
+  set marca(marca) {
+    this.#marca = marca;
+  }
+  get modelo() {
+    return this.#modelo;
+  }
+  set modelo(modelo) {
+    this.#modelo = modelo;
+  }
+  get color() {
+    return this.#color;
+  }
+  set color(color) {
+    this.#color = color;
+  }
+  get añoFabricación() {
+    return this.#añoFabricación;
+  }
+  set añoFabricación(añoFabricación) {
+    this.#añoFabricación = añoFabricación;
+  }
+  get cilindrada() {
+    return this.#cilindrada;
+  }
+  set cilindrada(cilindrada) {
+    this.#cilindrada = cilindrada;
+  }
 }
 
 /*•	Crea propiedades privadas para la marca, modelo, color, año de fabricación y cilindrada del vehículo.
