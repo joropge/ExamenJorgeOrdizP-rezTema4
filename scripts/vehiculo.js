@@ -43,6 +43,16 @@ class Vehiculo{
     }
 
     mostrarDatos(){
+        return `Marca: ${this.#marca} Modelo: ${this.#modelo} Color: ${this.#color} Año de fabricación: ${this.#añoFabricación} Cilindrada: ${this.#cilindrada}`;
+    }
+    acelerar(velocidad){
+        return `El vehiculo ha acelerado hasta la velocidad de ${velocidad} km/h`;
+    }
+    arrancar(){
+        return `El vehiculo ha arrancado`;
+    }
+    frenar(){
+        return `El vehiculo se ha detenido`;
     }
 }
 
