@@ -30,8 +30,8 @@ span{
     font-family: monospace;
     white-space: nowrap;
     border-right: 4px solid rgb(255, 196, 0);;
-    width: 21ch;
-    animation: typing 2s steps(21), blink 1s infinite step-end alternate;
+    width: 30ch;
+    animation: typing 2s steps(30), blink 1s infinite step-end alternate;
     overflow: hidden;
 }
 
@@ -40,7 +40,7 @@ span{
         width: 0;
     }
     to{
-        width: 21ch;
+        width: 30ch;
     }
     
 }

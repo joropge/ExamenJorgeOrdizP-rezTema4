@@ -1,15 +1,16 @@
 import { mostrarResultado } from "./main.js";
-class Vehiculo {
+export class Vehiculo {
   #marca;
   #modelo;
   #color;
-  #añoFabricación;
+  #anioFabricación;
   #cilindrada;
-  construsctor(marca, modelo, color, añoFabricación, cilindrada) {
+
+  constructor(marca, modelo, color, anioFabricación, cilindrada) {
     this.#marca = marca;
     this.#modelo = modelo;
     this.#color = color;
-    this.#añoFabricación = añoFabricación;
+    this.#anioFabricación = anioFabricación;
     this.#cilindrada = cilindrada;
   }
   mostrarDatos() {
@@ -20,7 +21,7 @@ class Vehiculo {
             <br />
             su color es: ${this.#color}
             <br />
-            Se fabricó el año: ${this.#añoFabricación}
+            Se fabricó el año: ${this.#anioFabricación}
             <br />
             Cilindrada: ${this.#cilindrada}
         `;
@@ -62,11 +63,11 @@ class Vehiculo {
   set color(color) {
     this.#color = color;
   }
-  get añoFabricación() {
-    return this.#añoFabricación;
+  get anioFabricación() {
+    return this.#anioFabricación;
   }
-  set añoFabricación(añoFabricación) {
-    this.#añoFabricación = añoFabricación;
+  set anioFabricación(anioFabricación) {
+    this.#anioFabricación = anioFabricación;
   }
   get cilindrada() {
     return this.#cilindrada;

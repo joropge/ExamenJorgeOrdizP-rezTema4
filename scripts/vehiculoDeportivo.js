@@ -13,17 +13,21 @@ import { Vehiculo } from "./vehiculo.js";
 
 export class AutomovilDeportivo extends Vehiculo {
     #potenciaMotor;
-    constructor(marca, modelo, color, añoFabricación, cilindrada, potenciaMotor){
-        super(marca, modelo, color, añoFabricación, cilindrada);
+    constructor(marca, modelo, color, anioFabricación, cilindrada, potenciaMotor){
+        super(marca, modelo, color, anioFabricación, cilindrada);
         this.#potenciaMotor = potenciaMotor;
 
     }
     potenciaMotor(){
         const mensaje = `La potencia del motor es de ${this.#potenciaMotor}`;
+        mostrarResultado(`<p>${mensaje}</p>`);
+
     }
 
     activarModoDeportivo(){
         const mensaje = `El modo deportivo ha sido activado`;
+        mostrarResultado(`<p>${mensaje}</p>`);
+
     }
 
     get potenciaMotor(){
