@@ -17,4 +17,19 @@ class AutomovilDeportivo extends Vehiculo {
         this.#potenciaMOtor = potenciaMotor;
 
     }
+    potenciaMotor(){
+        return this.#potenciaMOtor;
+    }
+
+    activarModoDeportivo(){
+        return `El modo deportivo ha sido activado`;
+    }
+
+    get potenciaMotor(){
+        return this.#potenciaMOtor;
+    }
+    
+    set potenciaMotor(potenciaMotor){
+        this.#potenciaMOtor = potenciaMotor;
+    }
 }
