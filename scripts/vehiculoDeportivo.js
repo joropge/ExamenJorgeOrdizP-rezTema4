@@ -8,4 +8,13 @@
 •	Asegúrate de implementar correctamente los métodos get y set necesarios para acceder y modificar los atributos de la clase AutomovilDeportivo.
 
  */
-class AutomovilDeportivo extends Vehiculo {}
+import { mostrarResultado } from "./main.js";
+
+class AutomovilDeportivo extends Vehiculo {
+    #potenciaMOtor;
+    constructor(marca, modelo, color, añoFabricación, cilindrada, potenciaMotor){
+        super(marca, modelo, color, añoFabricación, cilindrada);
+        this.#potenciaMOtor = potenciaMotor;
+
+    }
+}

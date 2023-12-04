@@ -1,3 +1,4 @@
+import { mostrarResultado } from "./main.js";
 class Vehiculo{
     #marca;
     #modelo;
